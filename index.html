@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Sinhala Keyboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    #text-area {
+      width: 90%;
+      max-width: 500px;
+      height: 150px;
+      font-size: 20px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      resize: none;
+    }
+
+    .keyboard {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 500px;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .key {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4e94f5;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.1s;
+    }
+
+    .key:active {
+      transform: scale(0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Sinhala Keyboard</h1>
+  <textarea id="text-area" placeholder="Type here..."></textarea>
+
+  <div class="keyboard" id="keyboard">
+    <!-- Sinhala characters -->
+    <div class="key">අ</div>
+    <div class="key">ආ</div>
+    <div class="key">ඇ</div>
+    <div class="key">ඈ</div>
+    <div class="key">ඉ</div>
+    <div class="key">ඊ</div>
+    <div class="key">උ</div>
+    <div class="key">ඌ</div>
+    <div class="key">එ</div>
+    <div class="key">ඒ</div>
+    <div class="key">ඔ</div>
+    <div class="key">ඕ</div>
+    <div class="key">ක</div>
+    <div class="key">ග</div>
+    <div class="key">ච</div>
+    <div class="key">ඤ</div>
+    <div class="key">ට</div>
+    <div class="key">ඩ</div>
+    <div class="key">ත</div>
+    <div class="key">ද</div>
+    <div class="key">න</div>
+    <div class="key">ප</div>
+    <div class="key">බ</div>
+    <div class="key">ම</div>
+    <div class="key">ය</div>
+    <div class="key">ර</div>
+    <div class="key">ල</div>
+    <div class="key">ව</div>
+    <div class="key">ශ</div>
+    <div class="key">ස</div>
+    <div class="key">හ</div>
+    <div class="key">ළ</div>
+  </div>
+
+  <script>
+    // Select all keys and the text area
+    const keys = document.querySelectorAll('.key');
+    const textArea = document.getElementById('text-area');
+
+    // Add event listener to each key
+    keys.forEach(key => {
+      key.addEventListener('click', () => {
+        // Add the clicked key's text to the text area
+        textArea.value += key.textContent;
+      });
+    });
+  </script>
+</body>
+</html>
